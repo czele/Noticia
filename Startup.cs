@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using XNews.Configuration;
 
 namespace XNews
 {
@@ -26,6 +27,7 @@ namespace XNews
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.ConfigurarSwagger();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +41,8 @@ namespace XNews
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UtilizarConfiguracaoSwagger();
 
             app.UseAuthorization();
 

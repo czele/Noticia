@@ -7,6 +7,6 @@ namespace XNews.Repository
 {
     public class BaseRepository
     {
-        public string _connectionString = "Data Source=CAMILA\\SQLEXPRESS; Initial Catalog=Erecruta; Integrated Security=True";
+        public string _connectionString = "Data Source=CAMILA\\SQLEXPRESS; Initial Catalog=XNews; Integrated Security=True";
     }
 }
